@@ -1,32 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View,Image,pic}from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Judul from './Components/Judul';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Selamat Datang Bro</Text>
+        <View style={styles.container}>
+        <Judul/>
+        <Image source={pic} style={{width: 193, height: 110}}></Image>      
         <Text style={styles.instructions}>NAMA  : Aditya Nur Hidayatullah</Text>
         <Text style={styles.instructions}>KELAS : XI-RPL-2</Text>
         <Text style={styles.instructions}>ABSEN : 01</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+        <Image style={{width: 450, height: 450}} 
+        source={require('/Kelas11/KK4/Tararam1/adit.jpg')} />
+      </View>     
     );
   }
 }
@@ -34,18 +22,20 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 5,
+    marginBottom: 5,
+    color: '#0f0',
   },
   instructions: {
-    textAlign: 'center',
+    fontSize: 15,
+    textAlign: 'left',
     color: '#333333',
     marginBottom: 5,
+    marginTop: 10,
   },
 });
